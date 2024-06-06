@@ -60,3 +60,7 @@ def display_date(request):
 def menu(request):
     text = """<h1 style="color: #F4CE14;"> This is Little Lemon again!</h1>"""
     return HttpResponse(text)
+
+def about(request):
+    about_content = {'about': 'Based in LA, CA. Little Lemon'}
+    return render(request,"about.html", about_content)

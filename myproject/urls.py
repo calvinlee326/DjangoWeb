@@ -21,10 +21,7 @@ from myapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('myapp.urls')),  # This includes the URLs from myapp/urls.py
-    path('say_hello/', views.say_hello),
-    path('homepage/', views.homepage),
-    path('display_date/', views.display_date),
-    path('menu/', views.menu),
+    
 ]
 
 handler404='myproject.views.handler404'
