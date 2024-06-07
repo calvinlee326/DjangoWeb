@@ -58,8 +58,12 @@ def display_date(request):
     return HttpResponse(date_joined)
 
 def menu(request):
-    text = """<h1 style="color: #F4CE14;"> This is Little Lemon again!</h1>"""
-    return HttpResponse(text)
+    newmenu = {'mains': [
+        {'name': "falafel", 'price': "12"},
+        {'name': "shawarma", 'price': "15"},
+        {'name': "gyro", 'price': "10"},
+    ]}
+    return render(request, 'menu.html', newmenu)
 
 def about(request):
     about_content = {'about': 'Based in LA, CA. Little Lemon'}
